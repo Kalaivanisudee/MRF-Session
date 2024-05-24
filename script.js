@@ -15,6 +15,11 @@ function displayData(data){
         return obj;
     })
     console.log(withoutDescription);
+    let released2020 =data.filter((value,index,array)=>value.year==2020);
+    console.log("Released Movie List",released2020);
+    //Filter Method using index 
+    const releasedMovie2020=withoutDescription.filter((value,index,array)=> index %2 ==0)
+    console.log("Filter method using index",releasedMovie2020);
 }
 const data = getData(apiUrl, displayData);
 console.log(data);
